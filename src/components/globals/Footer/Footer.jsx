@@ -14,7 +14,7 @@ export const Footer = () => {
         </div>
         <div className="flex justify-center mt-6 space-x-6 md:mt-0">
           <p className="mt-6 text-sm font-medium leading-6 tracking-wider text-center text-white uppercase md:ml-6 lg:ml-12 md:mt-0">
-            © 2020 Alexandra Brown
+            © 2020 Jared Brown
             <span className="block mt-2 md:inline-block md:ml-8 lg:ml-12">
               Indianapolis, IN
             </span>

@@ -20,7 +20,7 @@ export const About = ({ heading, subheading, tidbits, photo }) => {
         <span className="block w-48 h-0.5 lg:w-56 xl:w-80 bg-gray-300" />
       </span>
       <div className="max-w-md px-4 mx-auto lg:container lg:px-20">
-        <div className="lg:grid lg:grid-cols-2 lg:gap-20 xl:gap-40">
+        <div className="relative lg:grid lg:grid-cols-2 lg:gap-20 xl:gap-40">
           <div className="py-10 lg:py-0">
             <Img fluid={fluidProps} className="w-full h-auto" />
             <h2 className="mt-8 text-xl font-bold tracking-wider uppercase lg:mt-12 md:text-2xl">
@@ -30,20 +30,22 @@ export const About = ({ heading, subheading, tidbits, photo }) => {
               {subheading}
             </p>
           </div>
-          <div className="mt-6 space-y-8">
-            {tidbits.map((tidbit, idx) => (
-              <div className="max-w-sm" key={tidbit._key}>
-                <span className="inline-block font-serif text-lg text-blue">
-                  0{idx + 1}
-                </span>
-                <h3 className="text-lg font-semibold tracking-wider uppercase">
-                  {tidbit.heading}
-                </h3>
-                <p className="mt-2 font-serif leading-snug tracking-wide text-md">
-                  {tidbit.body}
-                </p>
-              </div>
-            ))}
+          <div className="relative ">
+            <div className="sticky top-10 space-y-8">
+              {tidbits.map((tidbit, idx) => (
+                <div className="max-w-sm" key={tidbit._key}>
+                  <span className="inline-block font-serif text-lg text-blue">
+                    0{idx + 1}
+                  </span>
+                  <h3 className="text-lg font-semibold tracking-wider uppercase">
+                    {tidbit.heading}
+                  </h3>
+                  <p className="mt-2 font-serif leading-snug tracking-wide text-md">
+                    {tidbit.body}
+                  </p>
+                </div>
+              ))}
+            </div>
           </div>
         </div>
       </div>

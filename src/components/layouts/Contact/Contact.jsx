@@ -17,11 +17,11 @@ export const Contact = () => {
           </span>
         </h2>
         <Link
-          to="mailto:alex@alexandrabrown.me"
+          to="mailto:jared@jared.to"
           kind="text"
           className="inline-block mt-4 sm:mt-0"
         >
-          alex@alexandrabrown.me
+          jared@jared.to
         </Link>
       </div>
     </section>
