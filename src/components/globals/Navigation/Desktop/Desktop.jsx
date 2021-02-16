@@ -1,12 +1,8 @@
 import React from 'react'
-import useSound from 'use-sound'
 
 import { Link } from '@elements'
-import oldGame from '../../../../audio/old-game.mp3'
 
 export const Desktop = () => {
-  const [play] = useSound(oldGame)
-
   return (
     <nav className="hidden text-sm sm:block">
       <Link
