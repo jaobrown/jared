@@ -4,7 +4,7 @@ import Img from 'gatsby-image'
 import BlockContent from '@sanity/block-content-to-react'
 
 import { Layout } from '@globals'
-import { Link, VideoPlayer } from '@elements'
+import { Link, VideoPlayer, Code } from '@elements'
 
 const BlockRenderer = (props) => {
   const { style = 'normal' } = props.node
@@ -22,9 +22,13 @@ const YouTubeRenderer = (props) => {
   return <VideoPlayer url={url} />
 }
 
+const CodeRenderer = (props) => {
+  const { code } = props.node
+  return <Code>{code}</Code>
+}
+
 const WorkTemplate = ({ data }) => {
   const page = data.sanityWork
-  console.log('WorkTemplate -> page', page)
   return (
     <Layout>
       <div className="container">
@@ -43,7 +47,11 @@ const WorkTemplate = ({ data }) => {
         <section className="pb-10 mt-4 prose sm:mt-10 sm:pb-16 lg:pb-24 max-w-none">
           <BlockContent
             serializers={{
-              types: { block: BlockRenderer, youtube: YouTubeRenderer },
+              types: {
+                block: BlockRenderer,
+                youtube: YouTubeRenderer,
+                code: CodeRenderer,
+              },
             }}
             blocks={page._rawContent}
             dataset={process.env.GATSBY_SANITY_DATASET}
