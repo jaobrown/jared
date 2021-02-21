@@ -11,7 +11,7 @@ export const FeaturedWork = ({ works }) => {
     <section className="pb-10 sm:pb-20">
       <div className="container space-y-12 sm:space-y-16 xl:space-y-20">
         {works.map((work) => {
-          const slug = slugify(`${work.title} ${work.companyName}`)
+          const slug = slugify(`${work.title}`)
           const fluidProps = getFluidGatsbyImage(
             work.featuredImage?.asset?._id,
             { maxWidth: 2400 },
@@ -21,7 +21,7 @@ export const FeaturedWork = ({ works }) => {
             <Link
               key={work.id}
               className="block max-w-4xl mx-auto"
-              to={`/${slug}`}
+              to={`/work/${slug}`}
             >
               <article>
                 <Img fluid={fluidProps} alt={`${work.title} preview`} />

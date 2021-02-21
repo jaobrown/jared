@@ -56,11 +56,11 @@ exports.createPages = async ({ graphql, actions, reporter }) => {
 
   // create work
   result.data.allWork.nodes.forEach((work) => {
-    const fullWorkName = `${work.title} ${work.companyName}`
-    const slug = slugify(fullWorkName)
-    reporter.info(`Creating page at route: ${slug}`)
+    const slug = slugify(`${work.title}`)
+    const route = `work/${slug}`
+    reporter.info(`Creating page at route: /work/${slug}`)
     createPage({
-      path: slug,
+      path: route,
       component: path.resolve(`./src/templates/work.jsx`),
       context: {
         _id: work._id,
