@@ -19,7 +19,7 @@ export const Hero = (props) => {
       return (
         <section className="py-10">
           <div className="container prose">
-            Whoops! <code>{props.style}</code> is an unhandles style.
+            Whoops! <code>{props.style}</code> is an unhandled style.
           </div>
         </section>
       )

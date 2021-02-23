@@ -9,7 +9,7 @@ const NotFoundPage = () => {
       <Hero
         heading="404: Page Not Found"
         subheading="If you expected to see something here, I'm so sorry"
-        style="home"
+        style="home" // eslint-disable-line react/style-prop-object
       />
     </Layout>
   )
