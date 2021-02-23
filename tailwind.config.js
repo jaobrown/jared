@@ -101,6 +101,9 @@ module.exports = {
             letterSpacing: '1.25px',
             textTransform: 'uppercase',
           },
+          ul: {
+            maxWidth: '42rem',
+          }
         },
       },
     }),

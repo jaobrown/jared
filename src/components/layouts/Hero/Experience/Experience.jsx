@@ -4,7 +4,7 @@ import { Link } from '@elements'
 import { X } from '@images/svg/X'
 import { Box } from '@images/svg/Box'
 
-export const Experience = ({ heading, subheading, resume }) => {
+export const Experience = ({ heading, subheading, resume = true }) => {
   return (
     <section className="pt-16 pb-10 text-black xl:pb-12 md:pt-16 lg:pt-20">
       <div className="container">
@@ -21,13 +21,15 @@ export const Experience = ({ heading, subheading, resume }) => {
           <p className="max-w-md mx-auto mt-3 font-serif leading-snug md:text-lg">
             {subheading}
           </p>
-          <Link
-            to={`${resume.asset.url}?dl=`}
-            kind="text"
-            className="inline-block mt-5 tracking-wide capitalize md:text-lg sm:mt-8"
-          >
-            Download Resume
-          </Link>
+          {resume && (
+            <Link
+              to={`${resume.asset.url}?dl=`}
+              kind="text"
+              className="inline-block mt-5 tracking-wide capitalize md:text-lg sm:mt-8"
+            >
+              Download Resume
+            </Link>
+          )}
         </div>
       </div>
     </section>

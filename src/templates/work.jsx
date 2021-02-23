@@ -7,10 +7,15 @@ import { Layout } from '@globals'
 import { Link, VideoPlayer, Code } from '@elements'
 
 const BlockRenderer = (props) => {
+  console.log('🚀', props)
   const { style = 'normal' } = props.node
 
   if (style === 'normal') {
     return <p className="max-w-2xl">{props.children}</p>
+  }
+
+  if (style === 'blockquote') {
+    return <blockquote className="max-w-2xl">{props.children}</blockquote>
   }
 
   // Fall back to default handling
