@@ -7,6 +7,7 @@ module.exports = {
     author: `@jaobrown`,
     titleTemplate: '%s · Front End Engineer',
     url: 'https://www.jared.to', // No trailing slash allowed!
+    siteUrl: 'https://www.jared.to', // No trailing slash allowed!
     image: '/images/jared.jpg', // Path to your image you placed in the 'static' folder
     twitterUsername: '@kodadevs',
   },
