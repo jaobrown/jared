@@ -3,8 +3,8 @@ import React from 'react'
 export const Logo = ({ className }) => {
   return (
     <svg
-      viewBox="0 0 68 68"
       className={className}
+      viewBox="0 0 68 68"
       fill="none"
       xmlns="http://www.w3.org/2000/svg"
     >

@@ -3,9 +3,12 @@ require(`dotenv`).config()
 module.exports = {
   siteMetadata: {
     title: `Jared Brown`,
-    description: `Website for Jared Brown`,
+    description: `Jared is a web tech engineer focused on the front end. Genuinely enjoys javascript.`,
     author: `@jaobrown`,
-    siteUrl: `https://jared.to`,
+    titleTemplate: '%s · Front End Engineer',
+    url: 'https://www.jared.to', // No trailing slash allowed!
+    image: '/images/jared.jpg', // Path to your image you placed in the 'static' folder
+    twitterUsername: '@kodadevs',
   },
   plugins: [
     {
@@ -33,18 +36,18 @@ module.exports = {
       },
     },
     `gatsby-plugin-postcss`,
-    // {
-    //   resolve: `gatsby-plugin-manifest`,
-    //   options: {
-    //     name: `Alexandra Brown`,
-    //     short_name: `Alexandra Brown`,
-    //     start_url: `/`,
-    //     background_color: `#ffffff`,
-    //     theme_color: `#2E3030`,
-    //     display: `standalone`,
-    //     icon: `src/images/png/icon.png`,
-    //   },
-    // },
+    {
+      resolve: `gatsby-plugin-manifest`,
+      options: {
+        name: `Jared Brown`,
+        short_name: `Jared Brown`,
+        start_url: `/`,
+        background_color: `#ffffff`,
+        theme_color: `#6960FF`,
+        display: `standalone`,
+        icon: `src/images/png/favicon.png`,
+      },
+    },
     `gatsby-plugin-sitemap`,
   ],
 }
