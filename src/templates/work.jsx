@@ -7,7 +7,6 @@ import { Layout } from '@globals'
 import { Link, VideoPlayer, Code } from '@elements'
 
 const BlockRenderer = (props) => {
-  console.log('🚀', props)
   const { style = 'normal' } = props.node
 
   if (style === 'normal') {
